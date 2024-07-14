@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -----google fonts--- -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nerko+One&display=swap"
+      rel="stylesheet" />
+    <!-- -----bootstrap---- -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <!-- -----fontawsem---- -->
+    <link rel="stylesheet" href="./src/css/all.min.css" />
+    <!-- -----style sheet----- -->
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <title>Meals</title>
+  </head>
+  <body class="bg-black">
+    <!-- Nav Bar -->
+    <nav class="navbar w-80 h-screen fixed z-50">
+      <div class="nav-container">
+        <div class="flex">
+          <div class="nav-l bg-black h-screen">
+            <div
+              class="nav-content h-screen text-white p-7 flex flex-col justify-between">
+              <div class="nav-item">
+                <ul
+                  class="*:mb-4 *:relative *:top-48 *:transition-all *:duration-150 *:cursor-pointer overflow-hidden">
+                  <li class="nav-link search">Search</li>
+                  <li class="nav-link cat">Categories</li>
+                  <li class="nav-link area">Area</li>
+                  <li class="nav-link ingred">Ingredients</li>
+                  <li class="nav-link cont">Contact Us</li>
+                </ul>
+              </div>
+              <div class="footer">
+                <div class="social-icons">
+                  <i class="fa-brands fab fa-facebook"></i>
+                  <i class="fa-brands fab fa-twitter"></i>
+                  <i class="fa-solid fas fa-globe"></i>
+                </div>
+                <p>Copyright Â© 2024 All Rights Reserved.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="nav-r bg-white py-6 px-2 flex flex-col justify-between items-center rounded-e-lg">
+            <img class="w-16" src="imgs/logo.png" alt="logo" />
+            <i class="fa-solid fa-bars fa-2xl cursor-pointer opcl-nav"></i>
+            <div class="icons flex flex-col">
+              <i class="fa-solid fas fa-globe mb-1"></i>
+              <i class="fa-solid fas fas fa-share-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search page -->
+    <section class="search-section mb-6 hidden">
+      <div class="search-container w-full flex justify-center pt-6">
+        <form class="w-3/4">
+          <div class="inputs-container">
+            <div class="form-group flex mb-5">
+              <div class="name w-1/2 px-2">
+                <input
+                  type="text"
+                  class="w-full h-10 border rounded bg-transparent text-white"
+                  id="meal-name"
+                  placeholder=" Search By Name" />
+              </div>
+              <div class="first-letter w-1/2 px-2">
+                <input
+                  type="text"
+                  class="w-full h-10 border rounded bg-transparent text-white"
+                  id="meal-first-letter"
+                  placeholder=" Search By First Letter" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Categories page -->
+    <section class="categories-section px-14 hidden">
+      <div
+        class="categories-container grid grid-cols-1 md:grid-cols-4 gap-y-7 py-16"></div>
+    </section>
+
+    <!-- Area page -->
+    <section class="area-section px-14 hidden">
+      <div
+        class="area-container grid grid-cols-1 md:grid-cols-4 gap-y-14 py-16"></div>
+    </section>
+
+    <!-- Ingredients page -->
+    <section class="ingredients-section px-14 hidden">
+      <div
+        class="ingredients-container grid grid-cols-1 md:grid-cols-4 gap-y-14 py-16"></div>
+    </section>
+
+    <!--  meals section -->
+    <section class="meals-section px-16 hidden">
+      <div
+        class="meals-container grid grid-cols-1 md:grid-cols-4 gap-y-7 py-16"></div>
+    </section>
+
+    <!-- meal details section -->
+    <section class="meal-detials w-full hidden">
+      <div class="meal-container w-full flex justify-center">
+        <div class="container meal-details py-10">
+          <div
+            class="meal-details-body flex gap-x-7 text-white"
+            id="mealDetailsBody">
+            <div class="meal-details-body-img basis-1/3 rounded-md"></div>
+            <div class="basis-2/3">
+              <div class="meal-details-body-content"></div>
+              <div class="btns mt-5">
+                <a class="p-2 bg-green-600 rounded-md" href="" target="_blank"
+                  >Source</a
+                >
+                <a class="p-2 bg-red-600 rounded-md" href="" target="_blank"
+                  >Youtube</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us page -->
+    <section class="contact-section w-full hidden">
+      <div
+        class="contact-container w-full h-screen flex justify-center items-center text-center pt-24">
+        <form class="w-2/3">
+          <div class="inputs-container">
+            <div class="form-group flex mb-5">
+              <div class="name w-1/2 px-2">
+                <input
+                  type="text"
+                  class="name w-full h-9 border rounded"
+                  placeholder=" Enter Your Name" />
+              </div>
+              <div class="email w-1/2 px-2">
+                <input
+                  type="email"
+                  class="email w-full h-9 border rounded"
+                  placeholder=" Enter Your Email" />
+                <p
+                  class="bg-bg-contact-p text-text-contact-p py-4 border rounded border-rose-300 mt-2 mb-5 hidden"
+                  id="emailInvalid">
+                  Email not valid *exemple@yyy.zzz
+                </p>
+              </div>
+            </div>
+            <div class="form-group flex mb-5">
+              <div class="phone w-1/2 px-2">
+                <input
+                  type=""
+                  class="phone w-full h-9 border rounded"
+                  placeholder=" Enter Your Phone" />
+                <p
+                  class="bg-bg-contact-p text-text-contact-p py-4 border rounded border-rose-300 mt-2 mb-5 hidden"
+                  id="phoneInvalid">
+                  Enter valid Phone Number
+                </p>
+              </div>
+              <div class="age w-1/2 px-2">
+                <input
+                  type="number"
+                  class="age w-full h-9 border rounded"
+                  placeholder=" Enter Your Age" />
+                <p
+                  class="bg-bg-contact-p text-text-contact-p py-4 border rounded border-rose-300 mt-2 mb-5 hidden"
+                  id="ageInvalid">
+                  Enter valid age
+                </p>
+              </div>
+            </div>
+            <div class="form-group flex mb-5">
+              <div class="password w-1/2 px-2">
+                <input
+                  type="password"
+                  class="pass w-full h-9 border rounded"
+                  placeholder=" Enter Your Password" />
+                <p
+                  class="bg-bg-contact-p text-text-contact-p py-4 border rounded border-rose-300 mt-2 mb-5 hidden"
+                  id="passInvalid">
+                  Enter valid password *Minimum eight characters, at least one
+                  letter and one number:*
+                </p>
+              </div>
+              <div class="repassword w-1/2 px-2">
+                <input
+                  type="password"
+                  class="repass w-full h-9 border rounded"
+                  placeholder=" Enter Your Repassword" />
+                <p
+                  class="bg-bg-contact-p text-text-contact-p py-4 border rounded border-rose-300 mt-2 mb-5 hidden"
+                  id="repassInvalid">
+                  Enter valid repassword
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="border border-rose-800 text-rose-800 p-2 rounded-md"
+            type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Loading screen -->
+    <section class="loading-section h-screen hidden">
+      <div class="spinner h-screen flex justify-center items-center">
+        <div class="loader"></div>
+      </div>
+    </section>
+
+    <script src="./src/js/jquery-3.7.1.min.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
